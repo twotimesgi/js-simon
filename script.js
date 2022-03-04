@@ -3,11 +3,13 @@ let randTarget = [];
 let guess;
 let win;
 let correctCount;
+
 function hide(){
     container.innerHTML = "";
 }
 
 function ask(){
+    hide();
     win = true;
     correctCount = 0;
     for(let i = 1; i <= randTarget.length; i++){
@@ -35,5 +37,4 @@ while (randTarget.length < 5){
     }
 }
 
-setTimeout(hide, 4000);
 setTimeout(ask, 30000);
