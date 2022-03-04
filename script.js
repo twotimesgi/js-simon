@@ -9,7 +9,6 @@ function hide(){
 }
 
 function ask(){
-    hide();
     win = true;
     correctCount = 0;
     for(let i = 1; i <= randTarget.length; i++){
@@ -37,4 +36,7 @@ while (randTarget.length < 5){
     }
 }
 
-setTimeout(ask, 30000);
+setTimeout(function(){
+    hide();
+    setTimeout(ask,1000);
+}, 30000);
